@@ -1,1 +1,116 @@
-<style>
+body {
+    margin: 20px;
+    min-height: 100vh;
+    background-color: #1a1818;
+    border: 2px solid white;
+    background:
+        linear-gradient(rgba(0, 0, 0, 0.8), rgba(192, 20, 20, 0.5)),
+        url('texture.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.text {
+    font-size: 4em;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 4px 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+.info, .skills, .sports {
+    font-size: 2em;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+.applogo {
+    display: flex;
+    margin-top: 20px;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.applogo img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: contain;
+    border: 2px solid white;
+    margin-bottom: 50px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    cursor: pointer;
+}
+
+.applogo img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+}
+
+.image-row1, .image-row2 {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.image-row1 img, .image-row2 img {
+    width: 400px;
+    height: auto;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.9), 0 -10px 25px rgba(0,0,0,0.5);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.image-row1 img:hover, .image-row2 img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.9), 0 -15px 30px rgba(0,0,0,0.5);
+}
+
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 1200px) {
+    .image-row1 img, .image-row2 img {
+        width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .text { font-size: 2em; }
+    .info, .skills, .sports { font-size: 1.5em; }
+    .applogo { gap: 30px; }
+    .applogo img { width: 100px; height: 100px; }
+    .image-row1 img, .image-row2 img { width: 90%; max-width: none; }
+}
